@@ -10,10 +10,10 @@
 \addbibresource{nems.bib}
 
 %% FIGURES
-\usepackage{graphicx}
+\usepackage[export]{adjustbox}
 \usepackage{epstopdf}
 \graphicspath{{figures/}}
-\DeclareGraphicsExtensions{.pdf}
+\DeclareGraphicsExtensions{.pdf,.jpg}
 
 %% FONTS
 \usepackage{amsfonts,amssymb,amsmath}
@@ -42,8 +42,35 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{The setup}
-From data $\rightarrow$ to networks
+\begin{frame}[plain]
+\includegraphics[valign=c,height=4cm,trim={0 0 22cm 0}, clip]{F3_large.jpg}
+\hfill {\Huge $\rightarrow$} \hfill
+\includegraphics[valign=c,height=2cm,trim={30cm 0 0 0}, clip]{F4_large.jpg}
+
+\scriptsize \fullcite{Markowetz01012005}
+\end{frame}
+
+\begin{frame}{Nested Effects Models (NEM)}
+\begin{columns}
+\column{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{F1_large.jpg}
+
+\column{0.5\textwidth}
+\begin{itemize}
+  \item[S-genes] are the knockout genes
+  \item[E-genes] are the measured genes
+\end{itemize}
+\end{columns}
+\pause
+\begin{itemize}
+  \item \textbf{Main principle:} If an \textbf{E-gene} is differentially expressed subject to a knockout of an \textbf{S-gene}, they need to connect
+  \item \textbf{Modeling constraint:} An \textbf{E-gene} can only have a direct connection to only one \textbf{S-gene}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The model induces a \textbf{nesting} of E-gene sets}
+\centering
+\includegraphics{NestedEffects.jpg}
 \end{frame}
 
 \end{document}
